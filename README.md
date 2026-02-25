@@ -2,8 +2,8 @@
 
 **Built for the Kaggle MedGemma Impact Challenge 2025** *By Abhiram Radha Krishna*
 
-[![Kaggle Notebook](https://img.shields.io/badge/Kaggle-Open_Notebook-blue?logo=kaggle)](YOUR_KAGGLE_NOTEBOOK_LINK_HERE)
-[![YouTube Video](https://img.shields.io/badge/YouTube-Watch_Demo-red?logo=youtube)](YOUR_YOUTUBE_LINK_HERE)
+[![Kaggle Notebook](https://img.shields.io/badge/Kaggle-Open_Notebook-blue?logo=kaggle)](https://www.kaggle.com/code/abhiramrkrishna/sanjeevani-neuro-symbolic-ai-tool)
+[![YouTube Video](https://img.shields.io/badge/YouTube-Watch_Demo-red?logo=youtube)](https://youtu.be/AVXNr58o5b0?si=NiNxL2CnMj1CKhV5)
 
 ## 📌 The Problem: A Silent Epidemic
 Chronic Kidney Disease (CKD) affects **850 million people worldwide**, yet early stages are entirely asymptomatic. Urinary ¹H NMR spectroscopy can detect early metabolic shifts—depleted citrate, elevated TMAO, elevated lactate—*before* any eGFR decline is measurable. However, NMR interpretation requires expert spectroscopists, creating a critical access bottleneck globally.
@@ -27,12 +27,12 @@ MedGemma **never sees raw spectral data**. It receives only verified decimal rat
 * **Aggressive Triage Tuning:** Achieved **100% Sensitivity** and 89.5% accuracy on valid samples, ensuring no high-risk patients are missed during triage.
 * **Edge-Optimized:** The entire 7-Billion parameter multi-agent pipeline is heavily optimized via `bitsandbytes` 4-bit quantization, allowing it to run concurrently on constrained dual-T4 GPUs for on-device patient data privacy.
 
-![Confusion Matrix](assets/con_mat_1.png)
+![Confusion Matrix](assets/confusion matrix.png)
 
 ## 📊 Real-World Domain Gap Analysis
 To assess clinical readiness, Sanjeevani was evaluated via a zero-shot transfer test on the real-world **MTBLS1 clinical dataset**. This revealed a critical domain gap: real urine spectra exhibit a broad macromolecular baseline floor at 0.3 normalized intensity, compressing target amplitudes. 
 
-![Domain Gap Analysis](assets/spectra.png)
+![Domain Gap Analysis](assets/synthetic vs real spectra.png)
 
 *A model that fails honestly and explicably is more valuable for clinical AI development than one that succeeds silently on its own test set. Future V2 work includes integrating a quantum spin Hamiltonian simulator (Spinach) for physically accurate training spectra.*
 
