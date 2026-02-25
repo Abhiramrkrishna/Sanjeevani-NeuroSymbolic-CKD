@@ -27,12 +27,12 @@ MedGemma **never sees raw spectral data**. It receives only verified decimal rat
 * **Aggressive Triage Tuning:** Achieved **100% Sensitivity** and 89.5% accuracy on valid samples, ensuring no high-risk patients are missed during triage.
 * **Edge-Optimized:** The entire 7-Billion parameter multi-agent pipeline is heavily optimized via `bitsandbytes` 4-bit quantization, allowing it to run concurrently on constrained dual-T4 GPUs for on-device patient data privacy.
 
-![Confusion Matrix](assets/confusion matrix.png)
+![Confusion Matrix](assets/confusion_matrix.png)
 
 ## 📊 Real-World Domain Gap Analysis
 To assess clinical readiness, Sanjeevani was evaluated via a zero-shot transfer test on the real-world **MTBLS1 clinical dataset**. This revealed a critical domain gap: real urine spectra exhibit a broad macromolecular baseline floor at 0.3 normalized intensity, compressing target amplitudes. 
 
-![Domain Gap Analysis](assets/synthetic vs real spectra.png)
+![Domain Gap Analysis](assets/synthetic_vs_real_spectra.png)
 
 *A model that fails honestly and explicably is more valuable for clinical AI development than one that succeeds silently on its own test set. Future V2 work includes integrating a quantum spin Hamiltonian simulator (Spinach) for physically accurate training spectra.*
 
